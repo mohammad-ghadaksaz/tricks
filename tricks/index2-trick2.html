@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple iphone 14</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .gall {
+            width: 400px;
+            height: 300px;
+            border: 10px solid black;
+            margin: 100px 50px;
+            position: relative;
+            overflow: hidden;
+            border-top: 0;
+        }
+
+        .gall::before {
+            content:'';
+            width: 100%;
+            height: 10px;
+            background-color: black;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: 2s;
+        }
+
+        .gall:hover::before {
+            width: 20%;
+            background-color: darkorange;
+        }
+
+        .gall>img {
+            width: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding-top: 30px;
+            transition: .4s;
+        }
+
+        .gall>h2 {
+            width: 100%;
+            height: 28%;
+            background-color: rgba(50, 4, 85, 0.768);
+            position: absolute;
+            top: -100px;
+            left: -100px;
+            text-transform: uppercase;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 74px;
+            color: white;
+            transition: 1.3s;
+            padding-left: 10px;
+        }
+
+        .gall>p {
+            width: 100%;
+            height: 72%;
+            position: absolute;
+            bottom: -250px;
+            right: -100px;
+            background-color: rgba(255, 149, 0, 0.492);
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            font-size: 15px;
+            text-align: justify;
+            padding:50px 20px;
+            transition: 3s;
+            color: rgb(0, 0, 0);
+        }
+
+        .gall:hover h2 {
+            top: 0;left: 0;
+        }
+
+        .gall:hover p {
+            bottom: 0;right: 0;
+            border-top: 2px dashed white;
+        }
+
+        .gall:hover img {
+            transform: scale(1.3);
+        }
+        .gall>a{
+            position: absolute;
+            top: 0;left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <figure class="gall">
+        <img src="img/iphone-14-pro-max-purple-1.jpg" alt="" title="mioo">
+        <h2 title="apple">Iphone 14 promax 1TB </h2>
+        <p title="iphone 14">The new iphone Promax with deep purple color and some great upgrades , like the A16 bionic cheapset and some
+            shape changes + Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, eaque architecto libero
+            optio consectetur magni asperiores ipsum aspernatur sequi modi?</p>
+            <a href="https://www.apple.com/" target="_blank" rel="follow"></a>
+
+    </figure>
+</body>
+
+</html>
