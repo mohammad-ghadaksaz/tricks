@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu trick</title>
+    <style>
+        *{padding: 0;margin: 0;box-sizing: border-box;}
+        body{
+            width: 100%;
+            height: 100%;
+            background-color: rgb(42, 42, 84);
+        }
+        ul{
+            width: 200px;
+            height: 70px;
+            margin: 100px auto;
+            transform:rotate3d(1, -1, 0, -29deg);
+            transform-style: preserve-3d;
+        }
+        ul>li{
+            width: 100%;
+            height: 100%;
+            background-color: pink;
+         list-style-type: none;
+            width: 100%;height: 100%;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            align-items: center;
+            color: black;
+            font-size: 30px;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            transform-style: preserve-3d;
+            cursor: pointer;
+            border-bottom: 1px solid black;
+            transition: .6s;
+        }
+        ul>li::before,
+        ul>li::after{
+        content: '';
+        position: absolute;
+        }
+        ul>li::before{
+            width: 100%;
+            height: 80px;
+            background-color: rgb(248, 156, 172);
+            transform: rotateX(90deg);
+            transform-origin: bottom;
+            top: -80px;
+            left: 0;
+        }
+        ul>li::after{
+            width: 80px;
+            height: 100%;
+            background-color: purple;
+            transform: rotateY(-90deg);
+            transform-origin: right;
+            top: 0;
+            border-top: 1px solid white;
+            left: -80px;
+        }
+        li:hover{
+            transform: translateZ(20px
+            ) translateX(-43px);
+            background-color: yellowgreen;
+        }
+        li:hover::after,
+        li:hover::before{
+            background-color: green;
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Home</li>
+        <li>gallery</li>
+        <li>Bardia1</li>
+        <li>Bardia2</li>
+        <li>Bardia3</li>
+        <li>Bardia4</li>
+        <li>Bardia5</li>
+    </ul>
+</body>
+</html>
